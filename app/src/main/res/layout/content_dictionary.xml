@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:color="@color/colorPrimary"
+    tools:context=".activity.InformationActivity">
+
+    <ToggleButton
+        android:id="@+id/content_dictionary_toggleButton"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textOn="Toggle On"
+        android:textOff="Toggle Off">
+    </ToggleButton>
+
+    <FrameLayout
+        android:id="@+id/content_dictionary_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <include
+            layout="@layout/dictionary_setting_parts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <GridView
+        android:id="@+id/dictionaryGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:verticalSpacing="5dp"
+        android:gravity="center"
+        android:cacheColorHint="#00000000"/>
+</LinearLayout>
